@@ -25,7 +25,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.commandSelector.removeAllItems()
-        self.commandSelector.addItemsWithTitles(["/bin/sh","/sbin/ping"])
+        self.commandSelector.addItemsWithTitles(["/bin/sh","/usr/local/bin/python","/sbin/ping","/usr/bin/ftp"])
         self.stderrTextView.textColor = NSColor.redColor()
     }
 
@@ -91,6 +91,8 @@ class ViewController: NSViewController {
         self.task = NSTask()
         self.task.launchPath = self.commandSelector.titleOfSelectedItem
         self.task.arguments = self.argumentTextField.stringValue.componentsSeparatedByString(" ");
+        //ENV
+        self.task.environment = ["iPhone Distribution:XXXXXX":"CODE_SIGN_IDENTITY"]
         
         self.append("start task:" + self.task.launchPath! + " " + self.argumentTextField.stringValue + "\n", toTextView: self.stdoutTextVIew)
         
@@ -118,8 +120,12 @@ class ViewController: NSViewController {
     
     //event
     @IBAction func stdinEnterClicked(sender: NSButton) {
-        
+        if self.isRunning {
+            self.task.standardInput?.fileHandleForWriting.writeData(self.stdinTextField.stringValue.dataUsingEncoding(NSASCIIStringEncoding)!)
+            self.task.standardInput?.fileHandleForWriting.closeFile()
+        }
     }
+    
     @IBAction func runButtonClicked(sender: NSButton) {
         if self.isRunning {
             stopTask()

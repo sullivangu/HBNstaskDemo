@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4798281C114295009A5EF8 /* test.py in Resources */ = {isa = PBXBuildFile; fileRef = 7F4798261C114295009A5EF8 /* test.py */; settings = {ASSET_TAGS = (); }; };
+		7F4798291C114295009A5EF8 /* test.sh in Resources */ = {isa = PBXBuildFile; fileRef = 7F4798271C114295009A5EF8 /* test.sh */; settings = {ASSET_TAGS = (); }; };
 		7FBB744F1C0E903E00A49577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB744E1C0E903E00A49577 /* AppDelegate.swift */; };
 		7FBB74511C0E903E00A49577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB74501C0E903E00A49577 /* ViewController.swift */; };
 		7FBB74531C0E903E00A49577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FBB74521C0E903E00A49577 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F4798261C114295009A5EF8 /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
+		7F4798271C114295009A5EF8 /* test.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = test.sh; sourceTree = "<group>"; };
 		7FBB744B1C0E903E00A49577 /* HBNstaskDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBNstaskDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FBB744E1C0E903E00A49577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FBB74501C0E903E00A49577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		7FBB744D1C0E903E00A49577 /* HBNstaskDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7F4798261C114295009A5EF8 /* test.py */,
+				7F4798271C114295009A5EF8 /* test.sh */,
 				7FBB744E1C0E903E00A49577 /* AppDelegate.swift */,
 				7FBB74501C0E903E00A49577 /* ViewController.swift */,
 				7FBB74521C0E903E00A49577 /* Assets.xcassets */,
@@ -225,6 +231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4798291C114295009A5EF8 /* test.sh in Resources */,
+				7F4798281C114295009A5EF8 /* test.py in Resources */,
 				7FBB74531C0E903E00A49577 /* Assets.xcassets in Resources */,
 				7FBB74561C0E903F00A49577 /* Main.storyboard in Resources */,
 			);
@@ -474,6 +482,7 @@
 				7FBB74721C0E903F00A49577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FBB74731C0E903F00A49577 /* Build configuration list for PBXNativeTarget "HBNstaskDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +491,7 @@
 				7FBB74751C0E903F00A49577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FBB74761C0E903F00A49577 /* Build configuration list for PBXNativeTarget "HBNstaskDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +500,7 @@
 				7FBB74781C0E903F00A49577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
